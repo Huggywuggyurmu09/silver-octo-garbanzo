@@ -1,16 +1,16 @@
 // u can run this using harbor on pterodactyl or any alpine distro
+// MAKE sure to run `apk add --no-cache git nodejs npm python3 make g++ bash` first.
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
 const kumaRepo = "https://github.com/louislam/uptime-kuma.git";
 const kumaDir = path.join(__dirname, "uptime-kuma");
-const PORT = 5748; // Change this port if needed
+const PORT = 5748;
 process.env.PORT = PORT.toString();
 
 console.log("[💾 1/6] Installing packages...");
 execSync(`apk update`, { stdio: "inherit" });
-execSync(`apk add --no-cache git nodejs npm python3 make g++ bash`, { stdio: "inherit" });
 
 if (!fs.existsSync(kumaDir)) {
     console.log("[📩 2/6] Cloning Uptime Kuma...");
