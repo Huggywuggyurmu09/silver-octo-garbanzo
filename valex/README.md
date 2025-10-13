@@ -2,6 +2,8 @@
 
 **Valex** is a free key generator that issues temporary license keys valid for **7 days**. It produces a rotating pool of keys intended for testing, demos, or short-term access.
 
+If a key doesn't work, try another key.
+
 ---
 
 ## Summary
