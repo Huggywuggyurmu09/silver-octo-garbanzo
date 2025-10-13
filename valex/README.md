@@ -9,7 +9,7 @@ If a key doesn't work, try another key.
 ## Summary
 - **What:** A free key generator that dispenses **100 keys** per cycle.  
 - **Key lifetime:** **7 days** from issuance.  
-- **Refresh cadence:** Pool refreshes every **5 minutes** (new keys issued; old keys remain valid until their 7‑day expiry).  
+- **Refresh cadence:** Pool refreshes every **10 minutes** (new keys issued; old keys remain valid until their 7‑day expiry).  
 - **Status:** *Currently not patched* — treat as experimental; use with caution.
 
 ---
