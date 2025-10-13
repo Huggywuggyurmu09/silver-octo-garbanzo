@@ -15,17 +15,12 @@
 ## Features
 - ✅ Generates **100 keys** per cycle.  
 - ⏳ **7‑day expiry**: every key is valid for exactly **7 days** after creation.  
-- 🔁 **Auto-refresh**: new pool generated every **5 minutes** (does **not** retroactively invalidate previously generated keys — they expire in 7 days).  
+- 🔁 **Auto-refresh**: new pool generated every **10 minutes** (does **not** retroactively invalidate previously generated keys — they expire in 10 days).  
 - 📝 Optional metadata per key: `note`, `level`, `mask`, etc., if integrated with your licensing backend.
 
 ---
 
 ## Behavior & Lifetime (important)
 - **Issuance timestamp:** Each key records a creation timestamp (UTC).  
-- **Expiry rule:** `expiry = 7` = 7 days after creation. Example: created `2025-10-11T22:04:53.033Z` → expires `2025-10-18T22:04:53.033Z` (UTC).  
+- **Expiry rule:** Example: created `2025-10-11T22:04:53.033Z` → expires `2025-10-18T22:04:53.033Z` (UTC).  
 - **Refresh vs Expiry:** Refreshing the pool every 5 minutes **adds new keys**. Keys created earlier remain usable until their 7‑day TTL is reached (they are not immediately revoked by a refresh).
-
----
-
-## Example API usage
-Example URL fragment (KeyAuth-style) to create 100 keys that expire in 7 days:
